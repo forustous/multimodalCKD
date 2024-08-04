@@ -10,6 +10,9 @@ pip install tensorflow-gpu==2.1.0
 pip install tensorflow-addons==0.9.0  
 pip install tqdm  
 pip install opencv-python==4.5.5.64  
+
+# If you want to use (multiple) GPUs
+Install TensorRT and CUDA 10.1
 ```
 
 # Run the inference step
