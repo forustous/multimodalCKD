@@ -233,7 +233,7 @@ class Fundus(models.MultiMoel):
             test_auc.update_state(batch[1]['gt60'], predictions['gt60'])
             return predictions['gt60']
 
-        if NUM_GPU == 0:
+        if NUM_GPU == 0 or NUM_GPU == 1:
             model = self.multi_model(filters=filters, n_classes=n_classes)
             model.summary()
             model.load_weights(os.path.join('./model', FLAGS.load_dir, 'best_checkpoint'))
