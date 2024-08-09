@@ -335,6 +335,15 @@ class Fundus(models.MultiMoel):
                           as_text=False)
 
 
+    def save_model(self, dataset, filters, n_classes) :
+        # save_dir_name = FLAGS.load_dir
+        save_dir_name = '2023_02_20_15_38_56_wd0.00003' # 모델 위치
+        # checkpoint_prefix = os.path.join(os.path.join('./model', save_dir_name), "ckpt_{epoch}") # 모델 위치
+        checkpoint_prefix = os.path.join(os.path.join('./model', save_dir_name), "{epoch}") # 모델 위치
+        model = self.multi_model(filters=filters, n_classes=n_classes)
+        model.summary()
+        model.load_weights(checkpoint_prefix.format(epoch='best_checkpoint')) # epoch
+        tf.keras.models.save_model(model, './cha_retina_model.h5py')
 
     def grad_cam(self, dataset, filters, n_classes, load_dir_string, data_type_for_prediction_string, hospital_source_type_for_prediction_string):
         os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
@@ -430,6 +439,12 @@ def main(argv):
             data_type_for_prediction_string=FLAGS.data_type_for_prediction,
             hospital_source_type_for_prediction_string=FLAGS.hospital_source_type_for_prediction
         )
+    elif FLAGS.mode == 'save_model':
+        model.save_model(
+            dataset=dataset,
+            filters=FLAGS.filters,
+            n_classes=1
+        )    
     else:
         model.export(
             dataset=dataset,
