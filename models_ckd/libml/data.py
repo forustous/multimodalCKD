@@ -175,7 +175,7 @@ class DataSet:
             # DATA_DIR = '/home/latte/project/retina_ckd/code/eGFR_age_sex_with_proteinuria_EfficientNet_SmoothGrad/data/devset/tfrecords/'
             # DATA_DIR = '/home/latte/project/retina_ckd/code/eGFR_age_sex_with_proteinuria_EfficientNet_SmoothGrad/data_w_id/devset/tfrecords/'
             # DATA_DIR = '/home/latte/project/retina_ckd/code/eGFR_age_sex_with_proteinuria_EfficientNet_SmoothGrad/data_w_id_bright_haze_minmax/devset/tfrecords/'
-            DATA_DIR = '/home/young/models_ckd/data/devset/tfrecords/'
+            DATA_DIR = '/home/young/Github_upload/models_ckd/data/devset/tfrecords/'
             # EXT_DIR  = './data/SCHPC/tfrecords/'
             # EXT_DIR  = '/home/latte/project/retina_ckd/code/eGFR_age_sex_with_proteinuria_EfficientNet_SmoothGrad/data/devset/tfrecords/'
             # EXT_DIR  = '/home/latte/project/retina_ckd/code/eGFR_age_sex_with_proteinuria_val_with_full_schpc/data/SCHPC/tfrecords/'
