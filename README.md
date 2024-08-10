@@ -29,7 +29,7 @@ python ckd.py
 - When you run the ckd.py script, the raw retinal image (image.jpg) and urine analysis data (urine.csv) are preprocessed.  
 - The preprocessed multimodal data is then passed to the trained CKD model, resulting in a predicted CKD probability.
 
-# Output examples as the CKD probability of two subjects with binocular retinal images
+# Output example from the CKD model
 ```
 The probability of CKD is 0.469.
 ```
