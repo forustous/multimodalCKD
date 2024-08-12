@@ -34,7 +34,7 @@ python ckd.py
 The probability of CKD is 0.469.
 ```
 
-# Ensenbling CKD probability 
+# Ensembling CKD probability 
 - If you have two retinal images, such as those for the left and right eyes, the inference step needs to be performed twice.  
 - For example, you first pass the left retinal image along with urine analysis data to obtain CKD probability1.  
 - Then, you pass the right retinal image along with the urine analysis data to obtain CKD probability2.  
